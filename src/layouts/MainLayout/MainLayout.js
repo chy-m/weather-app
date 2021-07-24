@@ -5,9 +5,7 @@ import { Container } from '@material-ui/core'
 export const MainLayout = ({ children }) => {
   return (
     <StyledMainLayout>
-      <Container data-testid='container' size='large'>
-        {children}
-      </Container>
+      <Container size='large'>{children}</Container>
     </StyledMainLayout>
   )
 }

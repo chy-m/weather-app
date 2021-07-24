@@ -8,8 +8,8 @@ export const CardSkeleton = () => {
   return (
     <StyledCard>
       <StyledCardHead>
-        <Skeleton animation='wave' width='100%' height={70} data-testid='skeleton' />
-        <StyledSkeleton animation='wave' variant='circle' width={70} height={70} data-testid='skeleton' />
+        <Skeleton animation='wave' width='100%' height={70} />
+        <StyledSkeleton animation='wave' variant='circle' width={70} height={70} />
         <Skeleton animation='wave' width='100%' height={40} />
       </StyledCardHead>
       <CardContent>

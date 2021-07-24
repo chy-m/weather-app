@@ -42,11 +42,11 @@ export const WeatherCard = ({ date, title, icon, min, max }) => {
       </StyledCardHead>
       <StyledCardContent>
         <Typography variant='body2' color='textSecondary' component='p' align='center'>
-          {min}
+          {max}
         </Typography>
         <StyledDivider variant='middle' />
         <Typography variant='body2' color='textSecondary' component='p' align='center'>
-          {max}
+          {min}
         </Typography>
       </StyledCardContent>
     </StyledCard>

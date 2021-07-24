@@ -27,7 +27,7 @@ export const Weather = () => {
         itemToString={(item) => (item ? item.title : '')}
         inputValue={search}
       >
-        {({ getInputProps, getMenuProps, getItemProps, highlightedIndex, isOpen, inputValue, getLabelProps }) => (
+        {({ getInputProps, getMenuProps, getItemProps, highlightedIndex, isOpen }) => (
           <div>
             <TextField
               {...getInputProps({
@@ -81,15 +81,14 @@ export const Weather = () => {
       <StyledItems>
         {getWeatherState.loading
           ? Array.from(Array(7).keys()).map((index) => <CardSkeleton key={index} />)
-          : getWeatherState.value &&
-            getWeatherState.value.map((item, index) => (
+          : getWeatherState?.value?.map((item, index) => (
               <WeatherCard
                 key={index}
                 date={format(addDays(new Date(), index), 'EEEE do LLLL')}
                 title={item.weather[0].main}
                 icon={item.weather[0].icon}
-                min={item.temp.min}
-                max={item.temp.max}
+                min={`${Math.round(item.temp.min)}°C`}
+                max={`${Math.round(item.temp.max)}°C`}
               />
             ))}
       </StyledItems>
