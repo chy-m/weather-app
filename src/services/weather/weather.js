@@ -1,14 +1,12 @@
 import api from '../api'
+import { OPEN_WEATHER_MAP_API_ENDPOINT, OPEN_WEATHER_MAP_API_KEY } from '../../config'
 
 export const getWeather = (lat, lon) => {
-  return api.get(
-    'https://api.openweathermap.org/data/2.5/onecall?&units=metric&exclude=current,minutely,hourly',
-    {
-      params: {
-        appid: '9fcba578edc6bed9e3f357633bc962b6',
-        lat,
-        lon,
-      },
-    }
-  )
+  return api.get(OPEN_WEATHER_MAP_API_ENDPOINT, {
+    params: {
+      appid: OPEN_WEATHER_MAP_API_KEY,
+      lat,
+      lon,
+    },
+  })
 }

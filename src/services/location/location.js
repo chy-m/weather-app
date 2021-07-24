@@ -1,11 +1,11 @@
 import api from '../api'
+import { LOCATION_IQ_API_ENDPOINT, LOCATION_IQ_API_KEY } from '../../config'
 
 export const getLocation = (location) => {
-  console.log(location)
-  return api.get('https://eu1.locationiq.com/v1/search.php', {
+  return api.get(LOCATION_IQ_API_ENDPOINT, {
     params: {
       q: location,
-      key: 'pk.293e9914e79907cf104752752cf30ab3',
+      key: LOCATION_IQ_API_KEY,
       format: 'json',
     },
   })

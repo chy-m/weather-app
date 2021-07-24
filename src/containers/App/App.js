@@ -1,7 +1,12 @@
+import MainLayout from '../../layouts/MainLayout'
 import Weather from '../Weather'
 
 function App() {
-  return <Weather />
+  return (
+    <MainLayout>
+      <Weather />
+    </MainLayout>
+  )
 }
 
 export default App
